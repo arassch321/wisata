@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jul 2019 pada 17.23
--- Versi server: 10.3.16-MariaDB
--- Versi PHP: 7.3.7
+-- Waktu pembuatan: 08 Feb 2023 pada 13.29
+-- Versi server: 10.4.20-MariaDB
+-- Versi PHP: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,30 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `wisata`
 --
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_auth`
---
-
-CREATE TABLE `tb_auth` (
-  `id` int(11) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `role` varchar(10) NOT NULL,
-  `nama` varchar(70) NOT NULL,
-  `foto` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_auth`
---
-
-INSERT INTO `tb_auth` (`id`, `username`, `password`, `role`, `nama`, `foto`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'Admin', ''),
-(4, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'user', 'Ini User', 'e7f6efe85da4e0ff34c2a606dbf674f2.jpg'),
-(5, 'ilham', 'b63d204bf086017e34d8bd27ab969f28', 'user', 'M. Ilham Surya Pratama', '');
 
 -- --------------------------------------------------------
 
@@ -67,10 +42,7 @@ CREATE TABLE `tb_blog` (
 --
 
 INSERT INTO `tb_blog` (`id_blog`, `judul`, `slug_blog`, `isi`, `user`, `thumbnail`, `tgl_post`) VALUES
-(1, 'JAMIN KESELAMATAN WISATAWAN BROMO, DISHUB HIMBAU PEMILIK JEEP WISATA UJI KENDARAAN BERKALA', 'jamin-keselamatan-wisatawan-bromo-dishub-himbau-pe', '<p><strong>KRAKSAAN</strong>&nbsp;&ndash; Dinas Perhubungan (Dishub) Kabupaten Probolinggo berusaha semaksimal mungkin untuk terus memberikan pelayanan yang terbaik kepada masyarakat sesuai dengan Perbup No. 67 tahun 2016 tentang Tupoksi Dinas Perhubungan Kabupaten Probolinggo. Salah satunya adalah turut andil dalam memastikan keselamatan wisatawan yang akan berwisata di Bromo dengan menggunakan jasa transportasi Jeep. Seperti yang diketahui, ratusan Jeep yang beroperasi di kawasan wisata Bromo itu belum melaksanakan kewajiban Uji Kir selama kurun lima tahun terakhir ini.</p>\r\n\r\n<p>Oleh karenanya di awal tahun 2019 ini Dishub Kabupaten Probolinggo telah memulai penertiban kepada para pemilik kendaraan jip angkutan wisata Gunung Bromo tersebut. Tercatat sampai akhir bulan Januari ini saja, UPTD Balai Pengujian Kendaraan Bermotor Dishub Kabupaten Probolinggo telah melayani Uji Kir sebanyak 57 unit jip wisata dari Bromo, dan dipastikan jumlahnya akan terus bertambah. Kepala Dishub Heri Sulistiyanto mengungkapkan pihaknya mempunyai kiat &ndash; kiat khusus agar bisa merangsang dan mendorong para pemilik jip khususnya di wilayah kecamatan Sukapura agar secara sadar bersedia melakukan kewajibannya yaitu Uji Kir kendaraan.</p>\r\n\r\n<p>Karena Uji kir merupakan kewajiban pemilik kendaraan, baik angkutan umum maupun mobil penumpang. Hal itu dilakukan agar kendaraan yang beroperasi tidak membahayakan keselamatan pengendara dan para penumpang, &ldquo;Sebelumnya kami mengawali dengan silaturahmi dan sosialisasi kepada para tokoh masyarakat sekaligus paguyuban &ndash; paguyuban pemilik jasa transportasi wisata jip, dan alhamdulillah himbauan kami ditindaklanjuti dengan secara bertahap melakukan uji Kir,&rdquo; jelas Heri.</p>\r\n\r\n<p>Lebih lanjut mantan Kepala Dinas PMD ini menjelaskan, motivasi utama upaya ini bukanlah semata &ndash; mata demi untuk menyerap pendapatan asli daerah (PAD) yang bersumber dari uji kir tersebut, namun mengupayakan tindakan preventif untuk menjamin keselamatan jiwa para wisatawan gunung Bromo kedepannya, mengingat umur kendaraan yang memang rata &ndash; rata tergolong sudah tua dan gunung Bromo semakin ramai kunjungan wisata.</p>\r\n\r\n<p>&ldquo;Apalagi mereka tidak hanya mengangkut wisatawan lokal, tapi juga wisatawan mancanegara. Kalau misalnya ada hal yang tidak diinginkan karena kendaraan yang tidak layak, tidak hanya Probolinggo yang disorot, tapi Indonesia karena gunung Bromo adalah jujukan wisata kelas dunia,&rdquo; tandasnya<strong>.&nbsp;</strong></p>\r\n', 1, '1e1fe59ed7eef1e8b978ccfbe8e256c4.jpg', '2019-06-18'),
-(2, 'FPTI LIRIK POTENSI SPOT PANJAT TEBING DI LERENG UTARA ARGOPURO', 'fpti-lirik-potensi-spot-panjat-tebing-di-lereng-ut', '<p><strong>TIRIS, KRUCIL</strong>&nbsp;&ndash; Tak hanya molek, objek wisata alam di Kabupaten Probolinggo ternyata menyimpan banyak potensi tersembunyi. Khususnya di lereng utara Gunung Argopuro selain dikenal kaya akan keragaman hayati, karakter alam yang masih perawan acapkali mengundang penyuka olahraga ekstrim untuk turut mengeksplorasi. Siapa sangka tebing alam eksotis yang menjadi ciri khas pesona wisata alam Ranu Agung kecamatan Tiris, air terjun Kalipedati dan Hyang Darungan kecamatan Krucil ternyata memiliki reputasi mengagumkan bagi para pegiat olahraga panjat tebing Indonesia.</p>\r\n\r\n<p>Akhir Januari kemarin tim Federasi Panjat Tebing Indonesia (FPTI) Jawa Timur bersama Pengurus Cabang FPTI Kabupaten Probolinggo dan club panjat tebing lokal berkesempatan untuk mensurvey tiga lokasi tersebut. Dalam survey tersebut tim meneliti karakter batu, mengamati kondisi alam serta mengukur kedalaman dan keamanan dasar air pada tebing yang berada di Ranu Agung.</p>\r\n\r\n<p>Witjaksono, Kepala Bidang Tebing Alam pada Pengcab FPTI Kabupaten Probolinggo menjelaskan tebing alam di tiga lokasi tersebut masing-masing memiliki karakter dan klasifikasi yang berbeda. Tebing Hyang Darungan lebih pas untuk Bordering (skill climbing), tebing alam Kalipedati yang lebar dan ekstrim lebih tepat untuk profesional expert yaitu extreme rock climbing. &ldquo;Sedangkan tebing Ranu Agung sangat cocok untuk kelas panjat tebing yang saat ini sedang digemari yaitu deep water solo climbing.</p>\r\n\r\n<p>Jadi olahraga panjat tebing pada kelas ini tanpa menggunakan alat sedikit pun dan mengandalkan kedalaman air dibawahnya sebagai pengaman utama saat jatuh,&rdquo; papar Jackey, sapaan akrab bapak dua anak ini. Jackey mengemukakan FPTI Jatim akan lebih dulu mengembangkan spot panjat tebing di Ranu Agung untuk kemudian di publikasikan dengan baik. Bahkan karakter yang dimiliki oleh tebing Ranu Agung boleh dikatakan satu &ndash; satunya di Indonesia dimana tebingnya sangat aman untuk di panjat langsung dan memiliki grade yang lengkap, mulai untuk pemula sampai pemanjat tebing expert.</p>\r\n\r\n<p>Oleh karena itu kata jackey, dua bulan setelah giat survey tersebut akan menyusul agenda berikutnya yaitu pembuatan jalur untuk pemasangan anchor dan hanger sebagai media pemasangan carmantle (tali khusus untuk panjat tebing). &ldquo;Mohon doa restu InsyaAllah tebing Ranu Agung bakal ketempatan salah satu hajat FPTI Jatim yaitu Gatering FPTI,&rdquo; ungkapnya.</p>\r\n\r\n<p>Lebih lanjut alumni Universitas Zainul Hasan ini mengutarakan Kabupaten Probolinggo sangat kaya akan spot olahraga panjat tebing. Dan tebing alam yang dimiliki Kabupaten Probolinggo tidak kalah eksotis dan menantang dibanding daerah lain. &ldquo;Sebenarnya olahraga rock climbing juga banyak diminati di Kabupaten Probolinggo, hanya sarana saja yang belum siap. Oleh karena itu bersama FPTI Jawa Timur, Pengcab FPTI Kabupaten Probolinggo akan mengupayakan untuk segera memiliki sarana rock climbing,&rdquo; tandasnya.</p>\r\n', 5, 'cd432f82e83f8b2ddfb36082675c831d.jpg', '2019-06-18'),
-(3, 'SINERGITAS PT. JAWA POWER – PT. YTL BERSAMA MASYARAKAT LESTARIKAN SUMBER MATA AIR', 'sinergitas-pt-jawa-power-pt-ytl-bersama-masyarakat', '<p><strong>KOTAANYAR</strong>&nbsp;&ndash; Upayakan penyadartahuan masyarakat tentang manfaat pelestarian sumber mata air, PT. Jawa Power &ndash; PT. YTL Jawa Timur bersama warga masyarakat Desa Bhinor dan Kotaanyar bersinergi menanam ratusan bibit Bambu Petung dan pohon Gayam di sekitar sumur dan mata air tua, Jum&rsquo;at (25/01/2019) pagi.</p>\r\n\r\n<p>Mata air dan sumur tersebut berada di sekitar sebuah situs makam kuno (Prabu Jenggolo/sesepuh warga masyarakat Kotaanyar). Sumur tersebut masih aktif, bahkan pada saat musim kemarau debit air nya tetap stabil sehingga banyak dimanfaatkan para petani saat musim kemarau/musim tanam tembakau dengan memanfaatkan mesin pompa air.</p>\r\n\r\n<p>&ldquo;Penanaman bibit bambu petung disekitar mata air dan pohon gayam di aliran sungai ini nantinya akan memperkuat area tangkapan air. Hal ini merupakan salah satu upaya sebagai solusi jangka panjang bagi permasalahan kekeringan pada saat musim kemarau,&rdquo; jelas Syofi&rsquo;i, Kepala Bagian External Relations pada PT. YTL Jawa Timur saat berkegiatan bersama masyarakat Kotaanyar.</p>\r\n\r\n<p>Syofi&rsquo;i menjelaskan, sebelumnya sudah tersosialisasikan dengan baik kepada masyarakat setempat bahwa menanam bambu petung dan gayam juga akan memberikan dampak ekonomi nantinya. Selain menargetkan manfaat jangka panjang melalui aksi ini, hasil jangka menengahnya ternyata juga sangat menarik. Kali ini sudah timbul kesadaran dari masyarakat untuk ikut andil dalam aksi menanam untuk menyelamatkan air ini. Syofi&rsquo;i mengemukakan hal ini merupakan sebuah pencapaian yang baik dan tren positif yang perlu di gepuk tularkan secara terus menerus ke tengah masyarakat.</p>\r\n\r\n<p>Dimana umumnya masyarakat cenderung apatis dan acuh tak acuh dengan kegiatan pelestarian lingkungan. &ldquo;Kita selalu mengajak masyarakat untuk berperan aktif dalam hal ini, sebenarnya mereka juga peduli tinggal bagaimana kita mengawalinya. Alhamdulillah kini mereka pelan &ndash; pelan sudah mulai paham konsepnya yaitu kalau mau panen air ya harus menabung, caranya ya dengan menanam dan merawat mata air tersebut,&rdquo; tegas pria kelahiran Kota Malang ini.</p>\r\n\r\n<p>Lebih lanjut Syofi&rsquo;i mengemukakan, wilayah di selatan PLTU Paiton yang berkarakter berbukit dengan vegetasi tidak begitu rapat memang menjadi fokus kerja bagi CSR PT. YTL selama ini. Motivasi YTL adalah utk membantu masyarakat disini yang cenderung terdampak permasalahan kekurangan air. Setiap musim kemarau tiba, mereka harus rela merogoh rupiah sampai ratusan ribu untuk mendatangkan truk tangki air untuk Memenuhi kebutuhan sehari-hari mereka.</p>\r\n\r\n<p>&ldquo;Untuk Kotaanyar yang penting sudah ada langkah awal dulu sebagai upaya solusi jangka panjang, nanti sambil kita kaji dan pelajari untuk program penyelesaian selanjutnya seperti pembuatan tandon air, pipanisasi, dan tabungan air melalui sumur resapan,&rdquo; tandasnya.</p>\r\n', 1, '267ad7fc846241da5ccba3c35c3eb0b9.jpg', '2019-06-18'),
-(4, 'KEANEKARAGAMAN HAYATI LANGKA NAN EKSOTIS DI AIR TERJUN KALIPEDATI', 'keanekaragaman-hayati-langka-nan-eksotis-di-air-te', '<p><strong>KRUCIL</strong>&nbsp;- Ternyata ada sisi lain yang tidak banyak diperhatikan para pengunjung wisata alam air terjun Kalipedati. Selain panorama alam yang begitu asri dan lestari, ternyata objek wisata yang kian hari semakin diminati ini juga menyimpan kekayaan keanekaragaman hayati langka dan eksotis.</p>\r\n\r\n<p>Terletak di lereng utara Gunung Argopuro (Hyang Barat) tepatnya pada wilayah Administratif desa Kalianan, kecamatan Krucil dan sekaligus juga masih termasuk kawasan hutan lindung Petak 1a KRPH Bermi Kabupaten Probolinggo.</p>\r\n\r\n<p>Untuk mengungkap keberadaan keanekaragaman hayati yang juga hidup lestari di kawasan objek wisata ini, sebuah komunitas fotografi satwa liar Probolinggo (5:am_wildlifephotography) bersama suporter Profauna Probolinggo berhasil mengidentifikasi sekaligus mendokumentasikan puluhan jenis satwa burung dan beberapa primata di sepanjang aliran sungai Kalipedati sampai pada spot air terjun beberapa waktu lalu.</p>\r\n\r\n<p>Dalam kegiatan ini mereka juga mengajak serta beberapa pengamat satwa liar sekaligus Agen Tour Birding dari kota Malang, untuk melihat langsung bagaimana keindahan panorama alam Kabupaten Probolinggo yang juga menjadi rumah bagi satwa liar endemik Jawa.</p>\r\n\r\n<p>Djoko Prasetio mengemukakan bahwa keragaman jenis satwa langka dan endemik Jawa masih banyak tersimpan di hutan - hutan lindung di Kabupaten Probolinggo. Hutan lindung ibarat benteng terakhir satwa liar endemik di tengah maraknya exploitasi alam dan isinya oleh manusia.</p>\r\n\r\n<p>&quot;Hasil record dan dokumentasi ini akan kami sampaikan kepada pemerintah desa dan penanggung jawab kawasan ini, sekaligus kami upayakan penyadartahuan masyarakat masyarakat setempat bahwa dengan menjaga keberadaan satwa liar dan alam nya juga akan membawa dampak positif yaitu kunjungan wisata minat khusus,&quot; ungkap founder 5:am_wildlifephotography sekaligus Suporter Profauna ini.</p>\r\n\r\n<p>Sedikitnya 24 satwa liar jenis burung yang berhasil tercatat dan teridentifikasi saat pengamatan yaitu, Prenjak Coklat, Meninting kecil, Cekakak Jawa, Pelanduk semak, Elang ular bido, Elang Sikep madu Asia (Migran), Kicuit batu (migran), Kadalan birah, Pelanduk topi hitam, Takur tenggeret, Srigunting kelabu, Sikatan kerdil, Sikatan kepala abu abu, Cinenen pisang, cinenen Jawa, Wiwik kelabu, Kaladi ulam, Madu bunga api, Merbah terucuk, Merbah kutilang, Bondol jawa, Bondol peking dan layang - layang loreng.</p>\r\n\r\n<p>Selain jenis burung juga sering di jumpai adanya koloni lutung jawa dan tupai yang nampak menghiasi pepohonan sepanjang jalur menuju spot air terjun. Tentu hal ini menjadi tambahan atraksi wisata tersendiri bagi pengunjung, karena keberadaan mereka sangat mudah di amati, berbeda dengan jenis burung yang relatif sulit untuk diamati.</p>\r\n\r\n<p>Kukuh Wibowo, Bird Guide Profesional di salah satu Agen Tour Birding kota Malang mengungkapkan, keberadaan satwa liar yang masih terjaga dan adanya beberapa satwa yang memang sudah langka dan memiliki sebaran terbatas merupakan potensi besar yang menjadi aset utama dalam pengembangan wisata air terjun Kalipedati.</p>\r\n\r\n<p>Dirinya tidak menyangka sebelumnya bakal menjumpai sekelompok burung prenjak coklat di sini, secara prenjak coklat Jawa adalah sub-species endemic memang sudah sangat langka dan memiliki penyebaran terbatas yaitu Yunnan, Myanmar, Vietnam dan Indonesia yaitu di Jawa. Oleh karena itu prenjak coklat boleh dibilang calon &quot;endemic full species&quot; untuk Jawa.</p>\r\n\r\n<p>Adanya burung meninting kecil yang merupakan pemakan serangga air dan juga burung Takur tanggeret juga disebut sebagai indikator bahwa hutan, dan air di sepanjang aliran Kalipedati ini masih lestari dan asri.</p>\r\n\r\n<p>Ditambah keberadaan burung spesial yaitu prenjak coklat dan beberapa burung raptor Kukuh menerangkan, objek wisata Kalipedati ada peluang untuk ke arah wisata minat khusus. Namun masih dibutuhkan kajian lebih lanjut tentang keseluruhan potensi khusunya keanekaragaman burung dan satwa lain.</p>\r\n\r\n<p>&quot;InsyaAllah beberapa waktu kedepan kami ada agenda untuk mengantar dua tamu asing dari Amerika dan mereka tertarik untuk pengamatan satwa liar. InsyaAllah air terjun Kalipedati ini juga masuk salah satu rekomendasi kami kedepannya,&quot; ungkap Kukuh.</p>\r\n\r\n<p>Terpisah, Kepala Administrasi (Adm) KPH Probolinggo, Haris Suseno&nbsp;sangat mengapresiasi apa yang dilakukan komunitas yang terbilang cukup langka ini. Hal ini selaras dengan misi Perum Perhutani yaitu pengelolaan Sumber Daya Hutan secara seimbang dan Lestari sehingga bermanfaat sosial ekonomi masyarakat.</p>\r\n\r\n<p>Seiring dengan majunya pengembangan destinasi wisata alam di Kabupaten Probolinggo, pihaknya juga akan selalu mensuport semaksimal mungkin. Khususnya pada ecotourism yang juga banyak memanfaatkan kawasan hutan dengan segala keanekaragaman hayati di dalamnya.</p>\r\n\r\n<p>&quot;Jika sinergi ini bisa terjalin baik, Perhutani, Pemkab Probolinggo dan masyarakat Probolinggo, kami yakin perkembangan destinasi wisata alam Kabupaten Probolinggo ini akan bisa berkembang lebih maju dan berkonsep wawasan lingkungan,&quot; pungkasnya.</p>\r\n', 1, '31ad8187aabcc06b52dcb194f94d061c.jpg', '2019-06-18');
+(5, 'Suku Dayak Bumi Segandu Losarang', 'suku-dayak-bumi-segandu-losarang', '<p><strong>Masyarakat Dayak Losarang Indramayu ini muncul pada 1970. Cikal bakalnya merupakan perguruan silat serbaguna yang dipimpin Takmad. Keputusan Takmad untuk meninggalkan hiruk pikuk kehidupan duniawi dan menyebarkan kebaikan serta kesabaran diperoleh setelah dia bertapa. &quot;Bapak yang mendirikan. Dulu pakaiannya masih hitam-hitam,&quot; kata Wardi sambil menunjuk foto Takmad di rumah Punden Gunung Krakatau. Sekitar tahun 1990-an, nama perguruan silat yang dipimpin Takmad berubah hingga akhirnya menjadi Suku Dayak Hindu Budha Bumi Segandhu Indramayu. Ajarannya melatih kesabaran dan lebih dekat dengan alam. Bagi anggota ada ritual bernama kumkum untuk melatih kesabaran. Biasanya mereka merendam diri pada setiap musim hujan. Ritual Kumkum dilakukan selama empat bulan dalam setahun.&nbsp;</strong></p>\r\n\r\n<p><strong>Pada dasarnya ketika mereka melakukan Ritual Kumkum, aktivitas tetap dilakukan seperti biasa. Wardi mengimbuhkan, mayoritas anggota Dayak Hindu Budha Segandu Indramayu adalah petani. Saban hari mereka tidak mengenakan baju dan hanya menggunakan celana berwarna hitam putih.Sejatinya mereka merupakan suku tanpa identitas. Bagi mereka indentitas dengan tampilan dan baju yang digunakan merupakan identitas sebenarnya. Kemana pun mereka berpergian, hanya celana hitam putih yang mereka kenakan.</strong></p>\r\n', 1, '7e4623bac687f30b62ec95ea83d4aaf9.jpg', '2023-02-08');
 
 -- --------------------------------------------------------
 
@@ -91,156 +63,23 @@ CREATE TABLE `tb_budaya` (
 --
 
 INSERT INTO `tb_budaya` (`id_budaya`, `nama_budaya`, `slug_budaya`, `foto_budaya`, `deskripsi`) VALUES
-(1, 'Ludruk', 'ludruk', '23999b06c64da6d6d8fca4a85af3ee5a.jpg', '<p>Ludruk merupakan suatu bentuk pementasan drama kehidupan yang disajikan dengan pendekatan kehidupan sehari-hari masyarakat&nbsp;<strong>Jawa Timur</strong>&nbsp;pada umumnya. Ludruk tumbuh dan berkembang hamper disemua daerah di Jawa Timur bagian Timur termasuk di daerah <strong>Probolinggo</strong>. Tampilan ludruk khas <strong>Probolonggo </strong>memiliki perbedaan dengan ludruk-ludruk lainnya, yakni pada bahasa yang dipakai <strong>Ludruk Probolinggo</strong> menggunakan bahasa Jawa Ngoko yang di campur dengan bahasa Madura Pesisiran, baik dalam bentuk kidungan maupun dialog para pemainnya.</p>\r\n'),
-(4, 'Tari Glipang', 'tari-glipang', 'e0129ee7309d0cfbab54e0ad9d066d99.jpg', '<p>Tari Glipang lahir di&nbsp;<strong>Desa Pendil</strong>, <strong>Kecamatan Banyuanyar</strong>, <strong>Kabupaten Probolinggo</strong>&nbsp;ini sudah lama dikenal masyarakat. Tari Glipang Berasal dari kebiasan masyarakat. Kebiasaan yang sudah turun temurun tersebut akhirnya menjadi tradisi. Pak Parmo yang merupakan cucu dari pencipta Tari Glipang ini mengatakan bahwa &ldquo;<strong>Glipang</strong>&rdquo; bukanlah nama yang sebenarnya dari tarian tersebut. Awalnya nama tari tersebut adalah &ldquo;<strong>Gholiban</strong>&rdquo; berasal dari bahasa arab yang berarti kebiasaan.</p>\r\n'),
-(5, 'Petik Laut', 'petik-laut', '74ae1145a1991c043e51535d1ee28063.jpg', '<p>Petik Laut merupakan lomba balap perahu yang di adakan pada tanggal <strong>15 bulan Sya&rsquo;ban (15 hari sebelum puasa)</strong>. Tradisi ini berasal dari masyarakat yang bertujuan untuk menyambut hadirnya bulan puasa.</p>\r\n');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_galery_budaya`
---
-
-CREATE TABLE `tb_galery_budaya` (
-  `id_foto_budaya` int(11) NOT NULL,
-  `filename` varchar(50) NOT NULL,
-  `id_budaya` int(11) NOT NULL,
-  `token` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_galery_budaya`
---
-
-INSERT INTO `tb_galery_budaya` (`id_foto_budaya`, `filename`, `id_budaya`, `token`) VALUES
-(2, '79c23231579b466ba466aada46838eea.jpg', 1, '0.8719720236285151'),
-(4, '50555a19d87944ce12b8ac9671657da9.jpg', 4, '0.6535142543957024'),
-(5, '60d5d5ae8e1b276ee4b39216684a49c3.jpg', 4, '0.5778601971593991');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_galery_hotel`
---
-
-CREATE TABLE `tb_galery_hotel` (
-  `id_galery_hotel` int(11) NOT NULL,
-  `filename` varchar(50) NOT NULL,
-  `id_hotel` int(11) NOT NULL,
-  `token` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_galery_hotel`
---
-
-INSERT INTO `tb_galery_hotel` (`id_galery_hotel`, `filename`, `id_hotel`, `token`) VALUES
-(1, 'd6fc3524e79349472a9ee97c7354b862.jpg', 2, '0.8114236341859686'),
-(2, '11b452216176c9550676b4dc55097c82.jpg', 2, '0.079830855299996'),
-(4, '7d279fc607b350ccbf6c06074ac3340b.jpg', 2, '0.673879614204044'),
-(5, '997bd097e92514882e37fa9ad8d66899.jpg', 2, '0.48570559332212526'),
-(6, 'dae1d1fb0cda74ecc320cffaccb95f80.jpg', 2, '0.8164431451296621'),
-(7, '40c05d565d6271e1fe7fedc53118b010.jpg', 3, '0.5272276773743321'),
-(10, '1b3ac2fcb8b85bf202013ae872b31159.jpg', 3, '0.33662862407491634');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_galery_kuliner`
---
-
-CREATE TABLE `tb_galery_kuliner` (
-  `id_galery_kuliner` int(11) NOT NULL,
-  `filename` varchar(50) NOT NULL,
-  `id_kuliner` int(11) NOT NULL,
-  `token` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_galery_kuliner`
---
-
-INSERT INTO `tb_galery_kuliner` (`id_galery_kuliner`, `filename`, `id_kuliner`, `token`) VALUES
-(1, '6972df14084bf6b0fabef62f9f8f19d0.jpg', 2, '0.6156315561365411'),
-(2, 'fd7b2385fcdbb7a9b887e162ff941a6a.JPG', 2, '0.4718712858901015'),
-(3, '8a871eea97cbbe4e36bddaee77f6d36b.png', 2, '0.6327255120167279'),
-(4, '5e7d330b59a69433afc9e7a4b3565581.jpg', 3, '0.13842961108286955'),
-(8, '73997bdcf8e68d46d1bb1decca200320.png', 4, '0.9043533000740327'),
-(9, 'ae16f05d53fdc00ea017529079d4167e.jpg', 4, '0.5610825384270217'),
-(10, 'bad029ee03870b5349c0009469e91490.jpg', 4, '0.5979799257111489'),
-(11, 'a9664125b24a2c11a0a95e6f8b8ec9e3.jpg', 4, '0.11856818211564835'),
-(12, '5f6580c84583b7702c25d0f77bbd9086.jpeg', 4, '0.41933477403180897');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_galery_wisata`
---
-
-CREATE TABLE `tb_galery_wisata` (
-  `id_foto_wisata` int(11) NOT NULL,
-  `filename` varchar(50) NOT NULL,
-  `id_wisata` int(11) NOT NULL,
-  `token` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_galery_wisata`
---
-
-INSERT INTO `tb_galery_wisata` (`id_foto_wisata`, `filename`, `id_wisata`, `token`) VALUES
-(1, '03085791c0efc4097239f65650aa27c1.jpg', 2, ''),
-(2, '778e8d88b02b39f8dc1f2d3a9f2fdc18.jpg', 2, ''),
-(3, 'fe2f1f9e367a78b3fe56ff855fef5601.jpg', 2, ''),
-(4, 'fab22c747c14a617b05909874cc0e682.jpg', 2, ''),
-(5, '160900cf96f5b86933bfe08ea27fc244.png', 2, ''),
-(6, '22d268e80fe3dc98f823e1463722d5a0.png', 2, ''),
-(7, '86ddbdb2d87f3a275f9b81d3454202ff.png', 2, ''),
-(8, 'f561160868132c15780049e99af5a671.jpg', 2, ''),
-(9, '7818b3fe0eef591949b78852c80a0d47.jpg', 1, ''),
-(10, '229ed5919cde632038c16ff91893bf6a.png', 1, '0.36461845159266404'),
-(11, 'afc08d2f53ec436349a99bc596789843.jpg', 1, '0.12848864114836323'),
-(12, '01efca6dd1439ba28d2234d69e6e6301.png', 3, '0.5564293765266404'),
-(13, '77a27721a93e46c3a628ae08f314baaa.png', 3, '0.09354884187365475'),
-(14, '90d5e133ebc6e7db20255b3b83f1fac4.png', 3, '0.8828664591500512'),
-(15, 'dd4500adc433fe8705b57877a75e0319.png', 3, '0.6875212283389043'),
-(16, 'b47c767e37c2ea5e0532cf4905104441.jpg', 3, '0.17435185130950126'),
-(17, '65cc32d0c195a8e3a6154e5d9f07fb39.jpg', 3, '0.03932917124207336'),
-(18, '8167ff4c33aab3d47d56375bb46933bd.jpg', 4, '0.866847345335896'),
-(20, 'd48631864cc4df71923c53c261aa02e3.JPG', 4, '0.5685876606190223'),
-(21, '74d25fffaa8ff11b2badf0f3ad92b13c.jpg', 4, '0.289612430570344'),
-(22, 'c8f65df7b01411aec0e477745b6ebb08.JPG', 4, '0.7153369216829968'),
-(23, 'd3f24cbe2d9e0b10def7e9dedd0d2e96.jpg', 3, '0.9794201446001571'),
-(24, '4d34e067ba0d336a5adb5c1382374e69.JPG', 3, '0.2546420675689107'),
-(26, '88a158a2f0588546a79572c071cece8f.jpg', 6, '0.8146618806243162'),
-(40, 'e458c61906b43f35a999657e30ab0fc4.jpg', 6, '0.770239939823341'),
-(43, '1159068035e3830222024faa3defde1d.jpg', 6, '0.6196577714926477'),
-(45, 'fd67ec342f3626769072c940e16e8fb2.jpg', 1, '0.29990101873617836');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_hotel`
---
-
-CREATE TABLE `tb_hotel` (
-  `id_hotel` int(11) NOT NULL,
-  `nama_hotel` varchar(50) NOT NULL,
-  `slug_hotel` varchar(50) NOT NULL,
-  `alamat_hotel` text NOT NULL,
-  `deskripsi_hotel` text NOT NULL,
-  `foto_hotel` varchar(50) NOT NULL,
-  `peta_hotel` text NOT NULL,
-  `harga` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_hotel`
---
-
-INSERT INTO `tb_hotel` (`id_hotel`, `nama_hotel`, `slug_hotel`, `alamat_hotel`, `deskripsi_hotel`, `foto_hotel`, `peta_hotel`, `harga`) VALUES
-(2, 'Hotel Mawar', 'hotel-mawar', 'Kraksaan, Probolinggo', '<p>Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;Hotel Mawar Kraksaan&nbsp;</p>\r\n', '01028fd2a608b7f9a89cdea494433092.png', '', 0),
-(3, 'Hotel Bromo Permai 1 Probolinggo', 'hotel-bromo-permai-1-probolinggo', 'Dusun Cemara Lawang, Desa Ngadisari, Kecamatan Sukapura, Cemorolawang, Ngadisari, Sukapura, Probolinggo, Jawa Timur 67254', '<p>Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;</p>\r\n\r\n<p>Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;Hotel Bromo Permai 1 Probolinggo&nbsp;</p>\r\n', '07609905c8f4d41926e7d21a7b7c33b4.jpg', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.728067308137!2d112.96265021437803!3d-7.923446281080277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7ad9ff8fd78ff%3A0x6fdeba35284385f9!2sHotel+Bromo+Permai+1+Probolinggo!5e0!3m2!1sid!2sid!4v1560679975139!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 300000);
+(6, 'Batik', 'batik', 'd2ac96f72be7fac5a82de53d999c4a9c.jpg', '<p><strong>Batik Tulis Paoman (Batik Indramayu) merupakan kesenian tulis yang berasal dari Kabupaten Indramayu. Batik ini memiliki ciri khas pesisir dengan corak yang berbeda dengan batik dari daerah lain. Perpaduan antara kepercayaan, adat istiadat, seni dan lingkungan kehidupan pesisir, ditambah lagi adanya pengaruh dari luar ikut mempengaruhi terbentuknya motif dan karakter batik tulis pesisir.</strong></p>\r\n'),
+(7, 'Jaringan', 'jaringan', '119a7a26290c86a64f589a291437a96e.jpg', '<p><strong>Jaringan merupakan sebuah upacara yang dilakukan oleh kaum remaja yang bertujuan untuk mencari pasangan hidup yang dilaksanakn pada malam bulan purnama. kegiatan ini bertempat di desa parean Kecamatan kandang haur. Dalam menjalankan tradisi adat jaringan, para pria mengenakan kain sarung dan wanita memakai kain rajutan sebagai daya tarik. Salah satu versi asal mula jaringan sendiri dikaitkan dengan kebiasaan para nelayan yang tidak melaut pada bulan terang datang, ini diyakini karena&nbsp;waktu terang bulan ikan-ikan di laut berdiam di dasar laut sehingga sulit ditangkap. Oleh karena itu, para nelayan berkumpul di pasar jodoh ini untuk menemukan pasangan hidup mereka.</strong></p>\r\n'),
+(8, 'Mapag Tamba', 'mapag-tamba', '4b782c2b0234ee27c9fb79962f62ac0f.jpg', '<p><strong>Dengan membawa air suci yang telah didoakan ke dalam bungbung bambu, para petani menyiramkan air ke perbatasan sawah-sawah ke seluruh desa. Dalam menggelar adat&nbsp;Mapag Tamba&nbsp;yang merupakan sebuah upacara dilaksanakan pada masa tanam padi dengan tujuan untuk mengusir segala penyakit (hama) yang dapat merusak tanaman padi. Mapag Tamba ini disediakan oleh masyarakat sekitar yang memiliki persawahan dan para pertugas desalah yang berjalan mengelilingi persawahan yang hampir sekitar 2 kilo.</strong></p>\r\n'),
+(9, 'Nadran', 'nadran', '32923023919edfe78f25f2c6eb0a99ad.jpg', '<p><strong>Nadran&nbsp;merupakan sebuah cerminan dari sebuah hubungan manusia dengan sang pencipta dengan berupa ungkapan rasa sukur akan hasil tangkapan ikan dan mengharapkan akan meningkatnya hasil di masa mendatang serta dijauhkan dari bencana dan mara bahaya dalam mencari nafkah di laut. Umumnya nadran diselenggarakan antara bulan Oktober sampai Desember di daerah Pantai Eretan, Dadap, Karangsong, Limbangan, Glayem, Bugel dan Ujung Gebang.</strong></p>\r\n'),
+(10, 'Mapag Sri', 'mapag-sri', '355147591c992c06adfabcd26b0d7a7c.jpg', '<p><strong>Mapag Sri&nbsp;merupakan upacara yang dilaksanakn dengan tujuan untuk mengungkapkan rasa syukur kepada sang pencipta atas tibanaya masa panen, dengan cara melaksanakan pergelaran kesenian wayang kulit sehari semalam dengan lakon khusus dan biasanya dilaksanakan di balai desa</strong></p>\r\n'),
+(11, 'Ngarot', 'ngarot', '9e2d8f14eb9cd19858cc3fafeeee3a8a.jpg', '<p><strong>Ngarot&nbsp;sudah ada sejak abad 16 dan sampai sekarang masih di selenggarakan, terutama oleh masyarakat desa di Kecamatan Lelea setiap menjelang penggarapan sawah. Upacara dilaksanakan agar mendapatkan hasil pertanian yang melimpah dan upacara adat ini dilaksanakan setiap hari rabu, minggu keempat bulan November dimana pesertanya adalah para muda- mudi dengan kostum y ang khas dan aksesoris yang gemerlap. Tradisi Ngarot bermaksud mengumpulkan para pemuda-pemudi yang akan diberi tugas bertani. Intinya adalah para pemuda-pemudi akan saling bekerja sama dan gotong royong mengolah sawah. Tradisi Ngarot bertujuan untuk membina pergaulan yang sehat, agar saling mengenal, saling menyesuaikan sikap, kehendak, tingkah laku, yang sesuai dengan adat budaya.</strong></p>\r\n'),
+(12, 'Ngunjung', 'ngunjung', '72082d406ae61d6813bb9e213c822eca.jpg', '<p><strong>Ngunjung Yaitu upacara syukuran yang dilaksanakan di kuburan &ndash; kuburan yang dianggap keramat biasanya dilaksanakan pada bulan syuro dan mulud. Ngunjung/ Munjung berasal dari kata kunjung yang artinya mengunjungi makam leluhur sebagai salah satu wujud syukur masyarakat yang disertai untuk berdoa. Ngunjung juga menghadirkan sejumlah kesenian seperti Wayang cepak dan tarian</strong></p>\r\n'),
+(13, 'Sedekah Bumi', 'sedekah-bumi', '87a941993ef855dd74ac4d49803fb186.jpg', '<p><strong>Sedekah Bumi&nbsp;Adalah upacara yang dilaksanakan oileh petani pada saat akan turun menggarap sawahnya. biasanya dilakukan pada awal musim hujanyaitusekitar bulan oktober sampai desember. Prosesi upacara ini biasanya dimulai dari berkumpulnya masyarakat disuatu tempat dilkukan doa bersama dan setalah itu dilaksanakan upacara adat.</strong></p>\r\n'),
+(14, 'Genjring Akrobat', 'genjring-akrobat', 'aafcea51cfd18b5a972e6d11679306ae.jpg', '<p><strong>Pertunjukan dengan menggunakan tangga sebagai medianya, sepeda roda satu dengan diiringi alat music genjring/rebana dengan dilengkapi tari rudat.</strong></p>\r\n'),
+(15, 'Kuda Lumping', 'kuda-lumping', '5de18e40c021dd7911d99b0ff3a89458.jpg', '<p><strong>Kesenian dengan ciri khas penarinya menaiki kuda-kudaan yang terbuat dari kulit/lumping sambil melakukan atraksi yang berbau magis.</strong></p>\r\n'),
+(16, 'Sintren atau Lais', 'sintren-atau-lais', 'dac53d759ca9483288acad542d4d9119.jpg', '<p><strong>Daya tarik kesenian sintren ini adalah musik yang sangat khas berupa buyung, kendi, dan bumbung/batang bamboo.</strong></p>\r\n'),
+(17, 'Tarling', 'tarling', 'bd2b9e8f8c8c8cd5390813bb93ab10df.jpg', '<p><strong>Perpaduan seni music dan lagu yang pada awalnya ditampilkan dalam bentuk nyanyian yang hanya diringi gitar dan suling seiring perkembangan jaman dikemas dengan alat musik modern.</strong></p>\r\n'),
+(18, 'Tari Topeng Dermayon', 'tari-topeng-dermayon', 'ba38af227b92885ba3460978c3a8b5d3.jpg', '<p><strong>Memliki komposisi gerak tari yang khas dengan kostum topeng yang spesifik yang membedakan dengan tari topeng daerah lain. Tari topeng dermayon ini telah mendapat apresiasi yang tinggi dengan dimilikinya maestro topeng di Indramayu yaitu Mimi Rasinah.</strong></p>\r\n'),
+(19, 'Wayang Golek Cepak', 'wayang-golek-cepak', '14f7c2c618068c59e0770c84ec63b6d3.jpg', '<p><strong>Indramayu memiliki wayang golek cepak yang merupakan bagian dari purwa. Yang memedakan wayang ini dengan lainnya adalah lakon dan alur cerita, bentuk dan rupa tokohnya tidak diambil dari pakem pawayangan.</strong></p>\r\n'),
+(20, 'Sandiwara', 'sandiwara', '9b5c81e9a70d24cd8ed6ccbc049b33f3.jpg', '<p><strong>Seni pertunjukan yang berasal dari jawa, kesenian sandiwara ini di Indramayu biasanya mengisahkan tentang legenda dan sejarah yaitu sebuah pertunjukan pentasan sebuah cerita disebut pula lakon dalam bahasa jawa.</strong></p>\r\n'),
+(21, 'Wayang Kulit', 'wayang-kulit', 'e562981ebd4ac7e7bf7bcb66931ebb3f.jpg', '<p><strong>Kesenian wayng kulit ini masih melekat pada masyarakat Indramayu, dan wayang kulit Indramayu sama seperti wayang kulit jawa yang berbeda hanya bahasa saat mementaskannya.</strong></p>\r\n'),
+(22, 'Berokan', 'berokan', '348d82c79e7ae2a1a148b2ca336ac028.jpg', '<p><strong>Berokan merupakan kesenian yang berasal dari Indramayu, dimana kesenian ini hampir sama dengan kesenian barongsai yang berasal dari Cina.</strong></p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -261,9 +100,16 @@ CREATE TABLE `tb_kuliner` (
 --
 
 INSERT INTO `tb_kuliner` (`id_kuliner`, `nama_kuliner`, `slug_kuliner`, `deskripsi_kuliner`, `foto_kuliner`) VALUES
-(2, 'Soto Koya Kraksaan', 'soto-koya-kraksaan', '<p>Selain Mie Combor, makanan yang paling khas Probolinggo adalah Soto Koya Kraksaan. Soto Koya Kraksaan ada di beberapa tempat, salah satunya ada di samping SD Al Iryad Kraksaan Jl Mayjen Sutoyo.</p>\n', '06c99c29681acbf13af99218d9478b4b.jpg'),
-(3, 'Mie Combor', 'mie-combor', '<p>Mie Combor adalah salah satu makanan yang paling terkenal di Kabupaten Probolinggo. Tepatnya di alun-alun kota Kraksaan. Mie yang ditaburi kecambah ini konon katanya bisa meningkatkan vitalitas pria.</p>\r\n', 'fe63d6ccf5d67133c3cb4406a9b75430.jpeg'),
-(4, 'Nasi Goreng', 'nasi-goreng', '<p>Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;</p>\r\n\r\n<p>Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;Nasi Goreng&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2fbae4cf5a850d8a896905e326f3de36.jpg');
+(5, 'Pindang Gombyang', 'pindang-gombyang', '<p><strong>Masakan yang berbahan dasarkepala Ikan Jambal yang diberi bumbu seperti gulai dan untuk menambakhan rasa segar dengan menggunakan belimbing wuluh.</strong></p>\r\n', '00c904b68f9ad84ca3fca37f654c20bd.jpg'),
+(6, 'Burbacek', 'burbacek', '<p><strong>Bubur, yang ditambah dengan rumbah dan cecek. Cecek ini adalah kikil sapi, kikil ini terlebih dahulu dimasak menggunakan parutan kelapa yang ditambah dengan bumbu cabai merah.</strong></p>\r\n', '679b6550ab5738204688bd0c07c948fd.jpg'),
+(7, 'Pedesan Entog', 'pedesan-entog', '<p><strong>Pedesan entog merupakan kuliner sejenis bebek yang dimasak menggunakan bumbu pedas</strong></p>\r\n', '5d95fa476ed24ba31bdd1fb7202abbe9.jpg'),
+(8, 'Rumbah ', 'rumbah', '<p><strong>Rumbah adalah makanan yang berisi sayur-sayuran yang disiram dengan sambal kacang. Umumnya sayur-sayuran yang terdapat dalam rumbah yaitu kangkung, taoge, dan kol.</strong></p>\r\n', 'b7eb48c3d20c5853bb6a2ea62675e15d.jpg'),
+(9, 'Ragit', 'ragit', '<p><strong>Mie ragit ini, menggunakan kuah santan sayur santan udang, dan sebagai pelengkap, juga ditambahkan telur yang sudah diiris tipis.</strong></p>\r\n', 'fd11063528c14cdc1d8ea2dc073f111e.jpg'),
+(10, 'Kue Cikak', 'kue-cikak', '<p><strong>Kue cikak merupakan salah satu jenis kue basah yang identic manis sebagai jajanan pasar tradisional. Bahan utama pembuatan kue ini adalah tepung ketan dan ubi sehingga tekstur kue sedikit kenyal dan lembut.</strong></p>\r\n', '9e04217790bdf17f2a49ffee215c105d.jpg'),
+(11, 'Blengep Cotot', 'blengep-cotot', '<p><strong>Makanan yang terbuat dari singkong dan gula merah, ketika sesorang mengkonsumsi kuliner ini, maka gula merah akan keluar dari kulier tersebut, dan meleleh dimulut.</strong></p>\r\n', 'c4a083eff3f74d37ff9a9b7ff339949a.jpg'),
+(12, 'Bubur Glintir', 'bubur-glintir', '<p><strong>Bubur glintir ini terbuat dari tepung beras bukan ubi. Tepung beras kemudian dibentuk bulat-bulat, lalu direbus, menggunakan gula merah dan santan. Sehingga cita rasa yang dihasilkan oleh kuliner ini manis dan juga gurih</strong></p>\r\n', '1bd162b8590eb2601cbbcdb716e081d5.jpg'),
+(13, 'Nagasari', 'nagasari', '<p><strong>Kue ini terbuat dari tepung beras, gula pasir, daun pandan, santan kelapa, serta pisang yang dijadikan sebagai isiannya. Rasanya semakin nikmat, karena Nagasari dibungkus menggunakan daun pisang yang mampu mengeluarkan bau harum wangi semerbak.</strong></p>\r\n', '48171c55b0b07a9f5828618976d65890.jpg'),
+(14, 'Orog-orog', 'orog-orog', '<p><strong>Makanan ini terbuat dari tepung beras, lalu ditambahkan dengan gula&nbsp; merah dan parutan kelapa dibagian atasnya.</strong></p>\r\n', '887e5c2913d5c220fdc85d6b26c32743.jpg');
 
 -- --------------------------------------------------------
 
@@ -280,30 +126,48 @@ CREATE TABLE `tb_wisata` (
   `deskripsi` text NOT NULL,
   `lang_wisata` varchar(10) NOT NULL,
   `lat_wisata` varchar(10) NOT NULL,
-  `peta_wisata` text NOT NULL
+  `peta_wisata` text NOT NULL,
+  `jenis` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tb_wisata`
 --
 
-INSERT INTO `tb_wisata` (`id_wisata`, `nama_wisata`, `alamat_wisata`, `slug_wisata`, `foto_wisata`, `deskripsi`, `lang_wisata`, `lat_wisata`, `peta_wisata`) VALUES
-(1, 'Air Terjun Kedung Amis', 'Petungsari, Ngepung, Sukapura, Probolinggo, Jawa Timur 67255', 'air-terjun-kedung-amis', '28f602718686b7b149644d43ad2c1470.jpeg', '<p>Air terjun Kedung Amis terletak tepat sebelum masuk ke area Air Terjun Watu Lawang. Aliran air dari Air terjun Kedung Amis selanjutnya terbelah menjadi dua, yakni ke kiri yang mengarah ke Air Terjun Watu Lawang dan ke kanan yang mengarah ke Air Terjun Sumber Pakis II.</p>\r\n\r\n<p>Tempat ini sangat indah dan bisa memberikan sensasi yang berbeda dengan aktivitas kita sehari-hari. Wisata Air Terjun Kedung Amis di Probolinggo memiliki pesona keindahan yang sangat menarik untuk dikunjungi.</p>\r\n\r\n<h2><strong>Pergi Ke Sana</strong></h2>\r\n\r\n<p>Masih satu jalur dengan jalan raya menuju wisata gunung Bromo dari arah Probolinggo, ketika sampai di dekat SMKN 1 Sukapura terdapat sebuah gang kecil disebelahnya, dan kita harus menitipkan kendaraan pada masyarakat didekat kawasan tersebut. Kemudian dilanjutkan dengan turun ke bawah untuk menyusuri pinggiran sungai. Dari tempat parkir menuju sungai bisa memakan waktu sekitar 15 - 20 menit tergantung kondisi.</p>\r\n\r\n<p><strong>Rute 1:&nbsp;Kota Probolinggo -&gt; Jl. Raya Broto -&gt;&nbsp; Jl. Raya Ngepung</strong></p>\r\n\r\n<hr />\r\n<h2><strong>Tips Wisata</strong></h2>\r\n\r\n<ol>\r\n	<li>Selama perjalanan, terdapat beberapa air terjun lainnya (Triban, Sumber Pakis II, Watu Lawang)</li>\r\n	<li>Kami sarankan jika pergi ketempat wisata ini usahakan pada saat pagi hari (sebelum jam 12), jadi waktu kembali tidak terlalu sore (sebelum jam 4)</li>\r\n	<li>Dianjurkan jangan disaat hujan atau setelah hujan karena bukan hanya medan yang licin, tapi juga tempat ini masih rawan longsor dan banjir</li>\r\n	<li>Gunakan alas kaki yang tidak gampang selip karena trek yang cukup berbahaya</li>\r\n</ol>\r\n', '88937', '34344', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.2875466132336!2d113.07273231477852!3d-7.8649479943334555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTEnNTMuOCJTIDExM8KwMDQnMjkuNyJF!5e0!3m2!1sid!2sid!4v1560841632675!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
-(2, 'Air Terjun Kali Pedati', 'Unnamed Road, Dusun Selatan, Bermi, Krucil, Probolinggo, East Java 67288', 'air-terjun-kali-pedati', 'f9674d6bdde85d1635aa2d35dfa0406f.jpeg', '<p>Air Terjun Kali Pedati memiliki ketinggian sekitar 20 m dan masih berada di Kawasan Wisata Bremi di lereng Gunung Argopuro. Keberadaan air terjun ini di atas (ke arah hulu) Air Terjun Darungan dengan debit kucuran air yang lebih besar dan lebih tinggi.</p>\r\n\r\n<p>Jarak tempuh dari Ranu Agung Resort dengan kendaraan bermotor berkisar 1,5 jam ditambah jalan kaki selama 1 jam dengan menyisir daerah sepanjang aliran Sungai Pedati yang terkenal dengan tebing-tebing batuan vertikal.</p>\r\n\r\n<h2>Pergi Ke Sana</h2>\r\n\r\n<p>Air Terjun Kali Pedati ini berada di lereng Gunung Argopuro. Terletak di Desa Kalianan, Kecamatan Krucil. Jika menggunakan kendaraan umum, anda bisa naik bus dari kota Probolinggo dan berhenti di Desa Krucil. Setelah itu melanjutkan perjalanan dengan menyewa ojek motor.</p>\r\n\r\n<blockquote>\r\n<p><strong>Rute 1:</strong>&nbsp;Kota Probolinggo&nbsp; -&gt;&nbsp; Kalianan&nbsp; -&gt; Krucil</p>\r\n</blockquote>\r\n', '98765', '56789', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3398573262098!2d113.48825631477929!3d-7.963785994264097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTcnNDkuNiJTIDExM8KwMjknMjUuNiJF!5e0!3m2!1sid!2sid!4v1560841472532!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
-(3, 'Air Terjun Hyang Darungan', 'Kalianan, Bermi, Krucil, Probolinggo, Jawa Timur 67288', 'air-terjun-hyang-darungan', '00775862df4edb59017a713bd540472f.jpeg', '<p>Air terjun yang bernama lengkap Air Terjun Hyang Darungan ini berlokasi di Desa Bremi, Kecamatan Krucil, Kabupaten Probolinggo, Provinsi Jawa Timur. Bisa ditempuh sekitar 1 jam perjalanan dari Probolinggo dengan kendaraan bermotor dan diteruskan dengan berjalan kaki selama 1 jam melalui area Perkebunan Kopi Aeng Dingin di lereng barat Pegunungan Argopuro.</p>\r\n\r\n<h2>Pergi Ke Sana</h2>\r\n\r\n<p>Dari terminal kota Probolinggo bisa menggunakan bus jurusan Bremi, setelah itu &plusmn;2 jam jalan kaki dari pintu masuk wisata Bremi menuju ke air terjun.</p>\r\n\r\n<blockquote>\r\n<p><strong>Rute 1:</strong>&nbsp;Kota Probolinggo -&gt; Bremi</p>\r\n</blockquote>\r\n', '86876', '65657', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.358378877539!2d113.51502131477925!3d-7.961865994265427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTcnNDIuNyJTIDExM8KwMzEnMDIuMCJF!5e0!3m2!1sid!2sid!4v1560841340524!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
-(4, 'Air Panas Desa Tiris', 'Sapih, Branggah, Lumbang, Probolinggo, Jawa Timur 67183', 'air-panas-desa-tiris', '1eec90d2264fb621d86526c0b38e238e.jpg', '<p>Lokasi wisata sumber air panas ini berdekatan dengan Danau Segaran. Wisata ini seringkali juga dikenal sebagai istilah&nbsp;<em>natural hot spring</em>. Wisatawan datang berkunjung ke tempat ini tentu saja untuk menikmati sumber air panas yang ada untuk mandi atau berendam menghangatkan badan.</p>\r\n\r\n<p>Karena mengandung belerang, terdapat beberapa manfaat berendam di Air Panas Desa Tiris, antara lain membuat badan menjadi segar dan menyembuhkan berbagai penyakit kulit.</p>\r\n\r\n<h2>Pergi Ke Sana</h2>\r\n\r\n<p>Tidak ada angkutan umum yang langsung menuju ke lokasi. Lebih baik jika menggunakan kendaraan pribadi atau travel guide.</p>\r\n\r\n<blockquote>\r\n<p><strong>Rute 1:</strong>&nbsp;Kota Probolinggo&nbsp;&nbsp;Kec. Krucil&nbsp;&nbsp;Kec. Tiris</p>\r\n</blockquote>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.5012890715448!2d113.39580231477913!3d-7.947035994275795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTYnNDkuMyJTIDExM8KwMjMnNTIuOCJF!5e0!3m2!1sid!2sid!4v1560841181704!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
-(5, 'Air Terjun Madakaripura', 'Madakaripura Waterfall, Tersono, Sapih, Lumbang, Probolinggo, Jawa Timur 67183', 'air-terjun-madakaripura', 'd0d6c4ae00d11ec4c8a221378df6595f.jpg', '<p>Madakaripura diperkirakan menjadi lokasi terakhir Patih Gajah Mada sebelum menghadap sang pencipta. Nama Madakaripura diartikan sebagai tempat persemedian terakhir Gajah Mada. Yakni, Mada (Gajah Mada), Kari (terakhir), dan Pura (tempat bersemedi).</p>\r\n\r\n<h2>Tips Wisata</h2>\r\n\r\n<ol>\r\n	<li>Datanglah pagi hari sebelum jam 10, karena setelah jam 12 biasanya hujan atau banjir mulai datang</li>\r\n	<li>Jika sedang banjir, pengunjung tidak diperbolehkan untuk masuk sama sekali</li>\r\n	<li>Sebaiknya naik ojek dari parkiran untuk menuju ke air terjun, karena cukup jauh jika berjalan kaki</li>\r\n	<li>Disarankan untuk membeli jas hujan karena dipastikan akan basah kuyup</li>\r\n</ol>\r\n\r\n<h2>Informasi Lainnya</h2>\r\n\r\n<p>Tidak banyak literatur yang bisa ditemukan untuk membuktikan fakta keterkaitan Patih Gajah Mada dengan air terjun yang eksotis tersebut. Namun begitu, sebagian besar masyarakat percaya bahwa air terjun tersebut menjadi saksi bisu hari-hari terakhir Gajah Mada.</p>\r\n\r\n<p>Sejumlah mitos&nbsp; juga diceritakan warga setempat. Diantaranya, keberadaan senjata ampuh dari sang maha patih. Senjata tak kasat mata itu konon tersimpan di goa tempat Gajah Mada bersemedi. Untuk meyakinkan bahwa Gajah Mada memang berada di tempat itu, dibangun dua patung Gajah Mada di lokasi me uju air terjun sebagai penanda.</p>\r\n\r\n<h2>Pergi Ke Sana</h2>\r\n\r\n<p>Untuk menuju ke air terjun Madakaripura, anda bisa menggunakan kendaraan pribadi atau menyewa travel / jeep dari Kota Probolinggo. Lokasinya masih satu jalan dengan jalur ke Bromo.</p>\r\n\r\n<blockquote>\r\n<p><strong>Rute 1:</strong>&nbsp;Kota Probolinggo&nbsp; -&gt; Jl. Sukapura -&gt;&nbsp; Jl. Raya Lumbang</p>\r\n</blockquote>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.4531277339515!2d113.01375031477855!3d-7.8475519943456975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTAnNTEuMiJTIDExM8KwMDAnNTcuNCJF!5e0!3m2!1sid!2sid!4v1560841876377!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>'),
-(6, 'Air Terjun Sumber Pakis II', 'Petungsari, Ngepung, Sukapura, Probolinggo, Jawa Timur 67255', 'air-terjun-sumber-pakis-ii', '957e6145a5dc9c670ba04523c0c5232b.jpeg', '<p>Berada satu jalur dengan air terjun Watu Lawang. Di desa Ngepung, Kec. Sukapura. Air terjun Sumber Pakis II letaknya berdekatan dengan air terjun Triban &amp; air terjun Kedung Amis. Dari air terjun Kedung Amis nanti terdapat 2 aliran sungai, yang ke kiri ke air terjun Watu Lawang, sedangkan yang ke kanan ke air terjun Sumber Pakis II.</p>\r\n\r\n<h2>Tips Wisata</h2>\r\n\r\n<ol>\r\n	<li>Selama perjalanan, terdapat beberapa air terjun lainnya (Triban, Kedung Amis, Watu Lawang)</li>\r\n	<li>Kami sarankan jika pergi ketempat wisata ini usahakan pada saat pagi hari (sebelum jam 12), jadi waktu kembali tidak terlalu sore (sebelum jam 4)</li>\r\n	<li>Dianjurkan jangan disaat hujan atau setelah hujan karena bukan hanya medan yang licin, tapi juga tempat ini masih rawan longsor dan banjir</li>\r\n	<li>Gunakan alas kaki yang tidak gampang selip karena trek yang cukup berbahaya</li>\r\n</ol>\r\n\r\n<h2>Pergi Ke Sana</h2>\r\n\r\n<p>Masih satu jalur dengan jalan raya menuju wisata gunung Bromo dari arah Probolinggo, ketika sampai di dekat SMKN 1 Sukapura terdapat sebuah gang kecil disebelahnya, dan kita harus menitipkan kendaraan pada masyarakat didekat kawasan tersebut. Kemudian dilanjutkan dengan turun ke bawah untuk menyusuri pinggiran sungai. Dari tempat parkir menuju sungai bisa memakan waktu sekitar 15 - 20 menit tergantung kondisi.</p>\r\n\r\n<blockquote>\r\n<p><strong>Rute 1:</strong>&nbsp;Kota Probolinggo&nbsp; -&gt; Jl. Raya Broto -&gt;&nbsp; Jl. Raya Ngepung</p>\r\n</blockquote>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.2875466132336!2d113.07273231477852!3d-7.8649479943334555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTEnNTMuOCJTIDExM8KwMDQnMjkuNyJF!5e0!3m2!1sid!2sid!4v1560842020496!5m2!1sid!2sid\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>');
+INSERT INTO `tb_wisata` (`id_wisata`, `nama_wisata`, `alamat_wisata`, `slug_wisata`, `foto_wisata`, `deskripsi`, `lang_wisata`, `lat_wisata`, `peta_wisata`, `jenis`) VALUES
+(7, 'Pulau Biawak', ' Pulau Biawak, Kec. Indramayu, Kab. Indramayu', 'pulau-biawak', '7fc483bc1b5b8df709c3e5897a146eeb.jpg', '<p><strong>Satu tempat wisata di Indramayu yang menyuguhkan pemandangan alam yang mempesona. Wisata yang cocok bagi pecinta alam ini bernama Pulau Biawak Indramayu. Dipulau yang menawan ini tersimpan pantai biru nan cantik serta menyimpan nilai sejarah tinggi. Selain itu pengunjung yang datang juga disuguhkan sebuah menara yang biasa dijadikan tempat berfoto dengan spot pantai serta alam disekitar yang tampak hijau alami. Bagi pecinta diving tempat ini rekomended dimana alam bawah lautnya yang masih terjaga dan mempesona.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15873.864963757065!2d108.3805556!3d-5.9302777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6c182d36bd1993%3A0xe7a7c477fdb3c3d9!2sPulau%20Rakit!5e0!3m2!1sid!2sid!4v1675843906014!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(8, 'Pantai Dadap', 'Desa Dadap, Kec. Juntinyuat, Kab. Indramayu', 'pantai-dadap', 'd347ddcfbb00003309c7c1638cb71b85.jpg', '<p><strong>Pantai yang berada didesa Dadap, Kec. Juntinyuat, Kab. Indramayu, Jawa Barat yang satu ini sungguh Mempesona. Sangat terasa hembusan angin kencang serta gulungan ombak yang menawan cocok dijadikan tempat untuk menghilangkan segala kepenatan yang ada setelah lelah dengan berbagai aktivitas seharian, dan cocok sebagai tempat berlibur dengan keluarga.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15858.312707722525!2d108.4687374!3d-6.4481658!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eebb507bf85d3%3A0xab9ee3204d4e90ae!2sPANTAI%20DADAP!5e0!3m2!1sid!2sid!4v1675844939180!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(9, 'Pantai Karangsong', ' Karangsong, Kec. Indramayu, Kabupaten Indramayu', 'pantai-karangsong', '29f2d04ce16f518729bdc3ebb3d40efe.jpg', '<p><strong>Salah satu pantai yang tidak kalah eksotis yaitu Pantai Karangsong yang cocok menjadi bagian destinasi wajib dikunjungi. Dimana pantai ini terapat rekreasi air bermain, berenang ditepi pantai, juga terdapat penjual makanan dan minuman. Destinasi ini sangat cocok mengajak keluarga ataupun pasangan untuk berlibur dan bersantai. Lokasi Pnatai Karangsong ini berdekatan dengan Hutan Mangrove Karangsong. Luasnya perairan di Kabupaten Indramayu membuat pemerintah beserta berbagai instansi yang terkait membuat hutan resapan atau penangkal erosi yaitu Hutan Mangrove. Hutan ini sepanjang jalan dapat ditemui berbagai hewan seperti bangau, kadal, berbagai jenis hewan lainnya, Hutan dengan luas sekitar 25 hektar untuk mencapai hutan ini perlu menyewa perahu karena hutan Mangrove ini terletak pada sebrang Pantai Karangsong disepanjang jalan menaiki perahu akan melewati spot alam yang mempesona.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.67984183361!2d108.36640481397113!3d-6.3057277634646605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebc4872ce9051%3A0x488988f64087588f!2sPantai%20Karangsong!5e0!3m2!1sid!2sid!4v1675844997268!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(10, 'Pantai Glayem', 'Juntinyuat, Blok Glayem, Kec. Juntinyuat, Kab. Indramayu', 'pantai-glayem', 'b0ded42e7d8bfa0d875b46e031d66892.jpg', '<p><strong>Deretan pantai yang ada di Kabupaten Indramayu memang cukup banyak, pantai ini terkenal karena menjadi salah satu pantai nelayan dan memiliki pusat pelelangan ikan. Terlihat banyak sekali perahu nelayan lokal yang bersandar di bibir pantai. Selain itu Pantai Glayem ini terdapat rumah makan yang mengelola seafood. Jika berkunjung ke pantai ini bisa menikmati hidangan khas sambil menikmati suasana pantai syahdu.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15859.151125608301!2d108.43102811420704!3d-6.421307702473751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eeabcaafad1fb%3A0x2108a13674376eaf!2sPantai%20Glayem!5e0!3m2!1sid!2sid!4v1675845126057!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(11, 'Pantai Bali (Balongan Indah)', ' Jl. Raya Balongan, Balongan, Kabupaten Indramayu', 'pantai-bali-balongan-indah', '63ed20113014e1750713d8978d0c5a6b.jpg', '<p><strong>Pantai ini biasa disebut dengan pantai Balongan Indah yangg sesuai dengan lokasinya di Balongan. Pantai ini tampak mempunyai pasir yang berwarna hitam yang membalut pantai dikombinasikan dengan laut yang biru dan menawan membuat perpaduan pemandangan yang cantik nan elok. Selain itu, gulungan ombak yang silih berganti seolah sedang bernyanyi untuk alam. Tempat wisata salah satu rekomendsai yang ada di Indramayu.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.285326838343!2d108.38538581397164!3d-6.3571012639585325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebf1960710559%3A0x3ae5626b6d3d68bb!2sKedai%20seblak%20Bali!5e0!3m2!1sid!2sid!4v1675845188410!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(12, 'Pantai Tanah Merah Samboja', 'Lemah Abang Eretan, Indramayu', 'pantai-tanah-merah-samboja', '193be8ec9dd9a05e6788350d3fbad848.jpg', '<p><strong>Kondisi pantai ini cukup unik karena dipenuhi dengan tanah yang warnanya kemerahan, selain itu untuk memecah ombak agar tidak terjadi erosi atau pengikisan bibir pantai dibangun dinding bebatuan. Selain itu bisa juga menikmati indahnya deburan ombak dipantai ini dari dinding batu yang ada.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.616471295601!2d108.0529575!3d-6.3140079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb3341132cd33%3A0x903b1bab0570d32c!2sLA%20(%20pantai%20laut%20merah%20)%20ERETAN!5e0!3m2!1sid!2sid!4v1675845232182!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(13, 'Pantai Eretan', 'Lokasi : Eretan Wetan,Kec. Kandanghaur, Kab. Indramayu', 'pantai-eretan', '3765564c047004d85ab17dce4971c0d0.jpg', '<p><strong>Pantai eretan merupakan pantai yang penuh sejarah, konon katanya pasukan Jepang pertama kali menginjakan kakinya dipantai ini. Pasukan Jepang yang tiba memulai perlawanan kepada Belanda dari pantai in. Pnatai ini berada di jalan Pantura sehingga untuk mengunjungi pantai ini tidak terlalu sulit. Selain itu pantai eretan ini memiliki pesona alam yang menawan dengan pemandangan hijau yang alami, dan beberapa penduduk juga membangun empang tempat pembudidayaan ikan disekitar pantai ini</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63449.21028536626!2d108.02068636721505!3d-6.319336914589385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb3739e1de71f%3A0x798ed20b15b8aa79!2sMuara%20Pantai%20Eretan%20Kulon!5e0!3m2!1sid!2sid!4v1675845506761!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(14, 'Pantai Tebing Patrol', 'Patrol, Kab. Indramayu', 'pantai-tebing-patrol', '4ee8e349a6c545d8501ab453bf3a89cc.jpg', '<p><strong>Pantai tebing patrol bisa menjadi salah satu tempat pilihan berlibur bersama dengan orang tersayang. Pantai tebing patrol ini memiliki pemandangan yang sangat indah. Melihat ombak laut yang saling bersahutan dari tepi tebing dan memnag inilah letak keistimewaan pantai tebing patrol.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8136508909392!2d108.0040554!3d-6.288208299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e694d3ad2f8af07%3A0x5a06490541b21d1b!2sPantai%20Kepuh!5e0!3m2!1sid!2sid!4v1675846320255!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(15, 'Pantai Solikin', 'Desa Eretan Wetan dan Ilir, Kandanghaur, Kab. Indramayu', 'pantai-solikin', '9e716b5d7f639f93e894729c5f138e2c.jpg', '<p><strong>Dari deretan pantai yang ada di Indramayu terdapat pantai yang memiliki pemandangan menakjubkan yaitu pantai solikin. Pantai ini terdapat banyak beberapa pepohonan yang tanpa daun, pemandangan yang berbeda dengan pantai lainnya, akan sangat cocok untuk melihat matahari terbenam dengan pemandangan yang eksotis dipantai solikin ini</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15862.008575085692!2d108.1068453!3d-6.3289189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb384eeb58155%3A0xa80c48b72cbf0ec9!2sPantai%20PANJIWA%20Sumber%20Mas!5e0!3m2!1sid!2sid!4v1675846473963!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(16, 'Pantai Rembat', 'Jl. Raya Juntikedokan, Juntinyuat, Kab. Indramayu', 'pantai-rembat', '1364acfed4b9d437c2bdb436968e00c3.jpg', '<p><strong>Pantai rembat merupakan sebuah lokasi yang cocok untuk berlibur bersama keluarga. Indahnya suara ombak yang selalu bersahutan serta terlihat burung-burung yang datang untuk mencari mangsa membuat pemandangan laut semakin cantik. Selain itu terdapat berbagai spot foto unik dan menarik dipantai ini tidak kalah indah dan menawan.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7746293826967!2d108.4364040134619!3d-6.422996251887319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eeb2673c63e23%3A0x7b129b90dd682640!2sPantai%20Rembat!5e0!3m2!1sid!2sid!4v1675846496477!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(17, 'Pantai Tirtamaya', 'Juntikedokan, Juntinyuat, Kab. Indramayu', 'pantai-tirtamaya', '140484f325ee47edcea7dbac8af96b2b.jpg', '<p><strong>Meskipun bukan kawasan pantai berpasir putih, Pantai Tirtamaya menyuguhkan air laut yang jernih dan ombaknya tidak terlalu tinggi. Sehingga, pantai ini cukup aman bagi wisatawan yang ingin bermain di pantai ini. Bahkan,&nbsp; bisa juga berenang di sini. Tak ingin berenang dan hanya ingin memandangi pesona pantai yang indah bisa bersantai di bawah pohon yang teduh di sekitar pantai. Pantai ini juga menyediakan saung yang bisa digunakan wisatawan. Mereka dapat sekadar bersantai dan menikmati pemandangan.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8939292950586!2d108.42369411397235!3d-6.4076634644488255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ec00041c66af7%3A0x5b3b415b55a94ac1!2sPantai%20Tirtamaya!5e0!3m2!1sid!2sid!4v1675846558395!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(18, 'Pantai Tiris (Paris)', ' Pabean Ilir, Pasekan, Indramayu', 'pantai-tiris-paris', '15b77b074941790c77269cf75ddf2fa2.jpg', '<p><strong>Pantai ini merupakan salah satu destinasi wisata yang wajib dikunjungi saat kamu sedang berlibur di Indramayu. Mempunyai kawasan hutan mangrove untuk mencegah abrasi tidak hanya kawasan mangrove ada juga spot untuk berfoto, tiduran wahana hammock, dan juga gazebo. Pantai ini selain menyuguhkan berbagai spot tak kalah menariknya dengan pemandangan yang mempesona.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.06951627603!2d108.31418781397066!3d-6.254572062977191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebb4dad9c8901%3A0x44c74af2c47f54f1!2sPARIS%20(Pantai%20Tiris)!5e0!3m2!1sid!2sid!4v1675846706983!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(19, 'Pantai Plentong', 'Desa Ujunggebang, Kec. Sukkra, Kab. Indramayu', 'pantai-plentong', 'c88482ae7b8859aa048700a6fb70f4f3.jpg', '<p><strong>Salah satu pantai yang selalu ramai pengunjung adalah Pantai Plentong. Pantai Plentong mulai menunjukkan pesona-nya, pantai yang dulu sama sekali tidak di lirik, kini menjadi andalan pendapatan bagi warga Ujunggebang. Wajah Pantai Plentong menjadi kawasan yang lebih indah dipandang. Pihak pantai memfasilitasi seperti area parker, kamar bilas, musholla dan toilet. Pantai plentong tersedia berbagai macam wahana wisata yang dapat dimanfaatkan oleh wisatawan yaitu pemandangan alam yang membentang luas yang elok, banana boat, ATV, sepeda air, berenang, naik perahu,camping area, permainan anak. Salah satu pantai yang cocok untuk berlibur bersama orang tersayang.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.064679718416!2d107.93111251345258!3d-6.2552095505983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6951e119346269%3A0xb7a6b64b7d70d512!2sPantai%20Plentong%20Ujunggebang!5e0!3m2!1sid!2sid!4v1675846754766!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(20, 'Pantai Tirta Ayu', 'Jl. Tirta Ayu, Balongan, Indramayu', 'pantai-tirta-ayu', '214b7042a94ac77d6953b889999ea873.jpg', '<p><strong>Objek Wisata pantai Indramayu dengan penampilan yang semakin cantik. Kini pantai Tirta Ayu memiliki konsep seperti suasana di Bali, hal tersebuat tercetus sang penggiat pantai ini setelah berlibur di Pulau Dewata. Salah satu objek wisata rekomendasi untuk dkunjungi, pantai ini menyuguhkan ornament-ornamen gapura seperti di Bali tidak hanya itu pemandangan, dan spot foto yang instagramable yang membuat daya tarik pengunjung.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.324419870255!2d108.3796803139717!3d-6.352029063909577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebe58cb33592b%3A0x55ff37352aadf481!2sPantai%20Tirta%20Ayu!5e0!3m2!1sid!2sid!4v1675846786282!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 1),
+(21, 'Taman Tjimanoek', 'Jalan Cimanuk, Margadadi, Kec. Indramayu, Kab. Indramayu', 'taman-tjimanoek', '2b92e34b7bfe9dd3e82dfeb2244bf97c.jpg', '<p><strong>Wisata ini tempatnya sangat strategis dengan berbagai tumbuhan hijau yang tumbuh ditaman ini dengan area terbuka hijau yang memberikan kesejukan bagi siapa saja yang berkunjung. Tempat ini juga memiliki berbagai spot keren bagi yang berfoto jangan sampai terlewat untuk berkunjung ke Taman Tjimanoek. DIsekitar taman ini terlihat pedagang jajanan yang melengkapi waktu bersantai bagi pengunjung.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.516162858964!2d108.3189627139714!3d-6.327092363669531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebbfd289fe0a9%3A0xe9cd846c4e983a9e!2sTaman%20Cimanuk!5e0!3m2!1sid!2sid!4v1675846816156!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 2),
+(22, 'Waduk Cipancuh', 'Situraja, Kec. Gantar, Kab. Indramayu', 'waduk-cipancuh', 'b60904283177a7b92cc65ecfc7791622.jpg', '<p><strong>Waduk yang berfungsi untuk menampung air ini menawarkan pemandangan yang menarik dan cocok sekali dijadikan tempat bersantai dan berlibur. Waduk Cipancuh sendiri memiliki luas sekitar 70 hektar. Selain itu keindahan waduk ini semakin terasa dengan adanya pemandangan alam nan hijau disekitarnya, meski waduk ini dibangun sejak 1927 waduk Cipancuh masih tetap terjaga keindahannya.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31713.617429951937!2d107.9308236171937!3d-6.496068008897025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6936a8bbfb08fd%3A0x86708c64074fb64c!2sWaduk%20Cipancuh!5e0!3m2!1sid!2sid!4v1675846924683!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 2),
+(23, 'Taman Tugu Perjuangan', ' Pekandangan, Kec. Indramayu, Kab. Indramayu', 'taman-tugu-perjuangan', '328aa06cdc96027178b409ecb8d600cb.jpg', '<p><strong>Taman tugu ini terdapat ruang terbuka hijau yang cocok untuk bersantai bareng keluarga. Dengan lokasi yang strategis berdekatan dengan Bundaran Mangga yang semakin ramai juga banyak sekali jajanan yang dapat melengkapi waktu bersantai. Didekat Taman Tugu Perjuangan terdapat pula Masjid Islamic Center salah satu masjid yang selalu ramai pengunjung untuk beribadah dikarenakan memiliki desain yang modern nan megah sehingga mempunyai daya tarik tersendiri.</strong></p>\r\n', '', '', 'Taman Tugu Perjuangan', 2),
+(24, 'Situ Bolang', 'Desa Jatisura, Kec. Cikedung, Kab. Indramayu', 'situ-bolang', '46bcf5d5add66bc7b689cde5addee68f.jpg', '<p><strong>Situ bolang atau danau yang memiliki luas sekitar 74 hektar ini menjadi salah satu lokasi yang banyak dikunjungi wisatawan terutama pada musim liburan. Danau ini memiliki air berwarna biru kehijauan yang menawan. Selain menikmati indahnya danau berair biru kehijauan bisa menikmati wisata yang terdapat berbagai macam pepohonan mangga, dan peternakan kambing, selain itu banyak spot untuk berfoto. Wisata ini selain menyuguhkan pemandangan juga edukasi bagi yang mengunjunginya.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.88707755229!2d108.19120332695313!3d-6.535942699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ecfe5bd2f2e8f%3A0x94f32d582253f8f6!2sSitu%20Bolang!5e0!3m2!1sid!2sid!4v1675846983372!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 2),
+(25, 'Taman Rusa Bumi Patra', 'Jl. Bumi Patra Raya, Pekandangan – Indramayu', 'taman-rusa-bumi-patra', '47742508dbbc4e506a44c1da12a7d8a8.jpg', '<p><strong>Taman rusa bumi patra ini bisa menjadi salah satu opsi pilihan saat berlibur di Indramayu. Sebuah taman pelestarian atau pengembangan rusa Jawa ini memberikan banyak nilai edukasi sehingga sangat cocok untuk mengunjungi bersama orang tersayang terutama bersama buah hati untuk mengenal hewan.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3328523148803!2d108.33321811345792!3d-6.350934451328033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebeca347ce7af%3A0xa0ed8d9d43e1c309!2sTaman%20Rusa%20Bumi%20Patra%20Indramayu!5e0!3m2!1sid!2sid!4v1675847018958!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 2),
+(26, 'Curug Citayam', ' Desa Cikawung, Kec. Terisi, Indramayu', 'curug-citayam', 'b27a0b72122922d029ec3ac12e8067e8.jpg', '<p><strong>Curug Citayam ini merupakan salah satu rekomendasi tempat untuk berlibur bagi yang mempunyai hobi traveling. Meski keberadaanya belum begitu banyak dikenal, namun pesonanya tidak kalah dari air terjun atau curug yang ada ditempat lain. Untuk mengunjungi curug citayam ini memang mambutuhkan waktu dan tenaga ekstra karena lokasinya cukup tersembunyi dari pusat keramaian.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31721.572266435887!2d108.05247021710822!3d-6.368607004003719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb4dd34413d03%3A0x83e66cd1d9d065ef!2sCurug%2C%20Kec.%20Kandanghaur%2C%20Kabupaten%20Indramayu%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1675847050618!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 2),
+(27, 'Center Mutiara Bangsa', ' Komplek Waduk Bojongsari, Sindang, Bojongsari, Kec. Indramayu, Kab. Indramayu', 'center-mutiara-bangsa', 'e2a499e6752a253a10f3b585fe966c65.jpg', '<p><strong>Scince Center Mutiara Bangsa bisa menjadi salah satu lokasi liburan saat mengunjungi Kota Indramayu, Jawa Barat. Tempat Wisata ini dibuka sejak 2017 lalu dan berlokasi di waduk Bojongsari, Sindang, Bojongsari, Kec. Indramayu, Kab. Indramayu Jawa Barat. Wisata Scince Center Mutiara Bangsa ini mengutamakan edukasi bagi anak dan remaja. Terdapat sekitar 48 wahana yang menjadi pusat edukasi terbesar di Indonesia karena dilengkapi dengan IPTEK.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3669758795277!2d108.31583911397163!3d-6.346502963856307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb946543095a9%3A0xac33293430d85ecd!2sMUTIARA%20BANGSA%20SCIENCE%20CENTER!5e0!3m2!1sid!2sid!4v1675849307150!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 3),
+(28, 'Alun-alun Indramayu', 'Jl. Mayjen Sutoyo, Margadadi, Kec. Indramayu, Kab. Indramayu', 'alun-alun-indramayu', '859826115c1efa50dbc88818af44bfd1.jpg', '<p><strong>Salah satu lokasi di Kota Indramayu yang wajib dikunjungi adalah Alun-alun Indramayu. Wisata yang murah yang ada ditengah kota ini yang selalu ramai dikunjungi. Ruang terbuka hijau yang ditata serapi mungkin ini memang selalu menarik banyak orang untuk berkunjung. Terutama saat pagi hari, banyak orang yang duduk sambil beristirahat setelah lelah lari pagi. Alun-alun Indramayu ini lokasi yang strategis juga dekat dengan wisata Taman Tjimanoek dan Masjid Agung Indramayu.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5206244886185!2d108.31861621345654!3d-6.326510951140417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebc01eaaaaaab%3A0x6ef909d627eb01d7!2sAlun-Alun%20Indramayu!5e0!3m2!1sid!2sid!4v1675849486199!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 3),
+(29, 'Makam Raden Bagus Arya Wiralodra', 'Jl. Murahnara, Sindang, Kab. Indramayu', 'makam-raden-bagus-arya-wiralodra', 'a9d809d01bc13a3ab95bbeb63864b012.jpg', '<p><strong>Mengenal Indramayu melalui situs makam RAden Bagus Arya Wiralodra. Menurut sejarah Indramayu merupakan sosok pendiri Indramayu, dalam sejarahnya yang memperjuangkan dan berdirinya sebuah kota yang disebut Indramayu dengan gigih juga penuh semangat juang melawan penjajah yang ingin menguasai daerah Indramayu. Tidak heran beliau harum namanya disemua kalangan terutama masyarakat Indramayu khususnya dengan memberi kehormatan sebagai pahlawan. Makam Raden BAgus Arya Wiralodra ini sebagai perantara edukasi sejarah mengenalkan Indramayu.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.469533302732!2d108.31977031397143!3d-6.333165663727918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb9574612ab49%3A0xcc59867ea13ba2a6!2sMakam%20Raden%20Bagus%20Aria%20Wiralodra!5e0!3m2!1sid!2sid!4v1675849525678!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 3),
+(30, 'Agrowisata Mangga', 'Desa Jatisura, Kec. Cikedung, Kab. Indramayu', 'agrowisata-mangga', '851831a4b91ecc04dfa9fcc89de1e6a5.jpg', '<p><strong>Siapa yang tidak tahu jika Indrmayu dikenal sebagai kota penghasil buah mangga terbesai di Indonesia. Selain terdapat pohon mangga yang ditanam diperumahan serta perkebunan milik warga terdapat juga argowisata mangga yang cukup besar. Tempat wisata ini bisa dijadikan pilihan untuk mengunjunginya, selain menambah wawasan tentang mangga juga dapat membawa pulang buah mangga sebagai oleh-oleh untuk orang yang tersayang dirumah.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.06691331369!2d114.28231881399624!3d-8.492875288292455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7dae538f94c2d%3A0x4ff3154b3e58c7d!2sAgrowisata%20Syifaul%20Jannah!5e0!3m2!1sid!2sid!4v1675849560426!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 3),
+(31, 'Museum Bandar Cimanuk', 'Jl. Lemahabang, Kec. Indramayu. Kab. Indramayu', 'museum-bandar-cimanuk', 'e6574cce5072469bc241a0217afd2520.jpg', '<p><strong>Museum Bandar Cimanuk merupakan upaya untuk memberikan informasi terkait ragam kekayaan tradisi Indramayu pada masa lampau.Menurut pengelola museum ini Di masa lampau Indramayu merupakan salah satu daerah yang memiliki potensi tradisi yang luar biasa, dari situ diperlukan adanya instrumen sebagai informasi kepada masyarakat untuk menciptakan ruang pemajuan kebudayaan Indramayu di masa lampau. Di sini para pengunjung dapat menemukan naskah kuno Raden Arya Wiralodra. Selain itu ada juga koleksi benda-benda yang diciptakan sebagai teknologi tradisional oleh masyarakat Indramayu di masa lalu seperti pedati untuk angkutan barang di tahun 1800-an, dan banyak sekali peninggalan-peninggalan masa lampau dengan berupaya untuk menyelamatkan sejarah Indramayu</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5041367857307!2d108.32034161397146!3d-6.328659263684589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebbfd678bf9a7%3A0x9bc31e9ea697cf24!2sMuseum%20Bandar%20Cimanuk%20(MBC)!5e0!3m2!1sid!2sid!4v1675849597243!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 3),
+(32, 'Tiga Bintang Firdaus', 'Desa Jatimulya, Terisi, Indramayu', 'tiga-bintang-firdaus', '8f529847c8dbe192aa142ce6b565ae73.jpg', '<p><strong>Kolam renang dibuat dengan mengutamakan pemandangan alami dan menawan, Selain itu dilengkapi pula dengan taman satwa, Gazebo untuk pengunjung bersantai sambil menikmati indahnya desain dan pemandangan dikolam renang ini dan bisa menajadi spot foto yang bagus. Kolam renang sendiri dilengkapi dengan berbagai wahana permainan mulai dari ember tumpah, seluncuran, serta terapi ikan. </strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5041367857307!2d108.32034161397146!3d-6.328659263684589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebbfd678bf9a7%3A0x9bc31e9ea697cf24!2sMuseum%20Bandar%20Cimanuk%20(MBC)!5e0!3m2!1sid!2sid!4v1675849646703!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 4),
+(33, 'Agung Fantasi Waterpark', 'Jl. Bangkaloa Ilir-Widasari No.58, Bangkaloa Ilir, Kec. Widasari, Kab. Indramayu', 'agung-fantasi-waterpark', '87565908cfac9cec05747801b24fbc16.jpg', '<p><strong>Jika memiliki rencana mengunjungi Kota Indramayu untuk berlibur bisa mampir ke kawasan ini terdapat lokasi wisata Agung Fantasi Waterpark. Sebuah arena bermain air yang cocok dikunjungi bersama teman, pasangan, anak, dan keluarga. Berbagai wahana air yang dibuat khusus untuk anak-anak seperti kolam anak, perosotan, ember tumpah, dan masih banyak lagi. Selain itu banyak pula wahana yang dibuat khusus untuk orang dewasa yang memacu adrenalin.</strong></p>\r\n', '', '', '', 4),
+(34, 'Waterboom Bojongsari', 'Desa Bojongsari, Indramayu, Indramayu', 'waterboom-bojongsari', '5b3300b4255a8197eb1bf737d814996c.jpg', '<p><strong>Wisata fantasi ini menawarkan arena rekreasi seru yang cocok dijadikan pilihan tempat untuk menghabiskan waktu liburan dengan orang tersayang. Beberapa wahana yang tersedia seperti kolam arus, ember tumpah, bungee trampoline, serta ATV. Berbagai wahana dibuat demi memberi kepuasan dan rasa nyaman bagi siapa saja yang berkunjung ke Waterboom Bojongsari yang memiliki konsep water base theme park ini.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3827148933415!2d108.3165988139716!3d-6.344457963836587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eb9467acbd653%3A0x89dddcd92b97ad47!2sWater%20Boom%20BOJONG%20SARI%20INDAH%20(BSI)!5e0!3m2!1sid!2sid!4v1675849706027!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 4),
+(35, 'Waterboom Tirta Djaya', 'Jl. Jendral Sudirman, No. 09, Cipancuh, Haurgeulis, Indramayu', 'waterboom-tirta-djaya', 'ff6273e0b2f336fcc27c6bdd18055c0b.jpg', '<p><strong>Waterboom Tirta Djaya ini merupakan salah satu tempat wisata fantasi yang memiliki berbagai wahana air yang pasti sangat disukai oleh anak-anak. Kolam renang ini berbagai ukuran juga cocok sekali buat semua kalangan. Waterboom ini terkonsep ramah untuk semua kalangan dan usia.</strong></p>\r\n', '', '', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.592996188103!2d107.94100481397273!3d-6.4462705648259755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e693672ee7ecbf9%3A0xc4fdac40c77b8639!2sWaterboom%20Tirta%20Djaya!5e0!3m2!1sid!2sid!4v1675849792061!5m2!1sid!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', 4);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indeks untuk tabel `tb_auth`
---
-ALTER TABLE `tb_auth`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `tb_blog`
@@ -316,36 +180,6 @@ ALTER TABLE `tb_blog`
 --
 ALTER TABLE `tb_budaya`
   ADD PRIMARY KEY (`id_budaya`);
-
---
--- Indeks untuk tabel `tb_galery_budaya`
---
-ALTER TABLE `tb_galery_budaya`
-  ADD PRIMARY KEY (`id_foto_budaya`);
-
---
--- Indeks untuk tabel `tb_galery_hotel`
---
-ALTER TABLE `tb_galery_hotel`
-  ADD PRIMARY KEY (`id_galery_hotel`);
-
---
--- Indeks untuk tabel `tb_galery_kuliner`
---
-ALTER TABLE `tb_galery_kuliner`
-  ADD PRIMARY KEY (`id_galery_kuliner`);
-
---
--- Indeks untuk tabel `tb_galery_wisata`
---
-ALTER TABLE `tb_galery_wisata`
-  ADD PRIMARY KEY (`id_foto_wisata`);
-
---
--- Indeks untuk tabel `tb_hotel`
---
-ALTER TABLE `tb_hotel`
-  ADD PRIMARY KEY (`id_hotel`);
 
 --
 -- Indeks untuk tabel `tb_kuliner`
@@ -364,64 +198,28 @@ ALTER TABLE `tb_wisata`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tb_auth`
---
-ALTER TABLE `tb_auth`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- AUTO_INCREMENT untuk tabel `tb_blog`
 --
 ALTER TABLE `tb_blog`
-  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_budaya`
 --
 ALTER TABLE `tb_budaya`
-  MODIFY `id_budaya` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT untuk tabel `tb_galery_budaya`
---
-ALTER TABLE `tb_galery_budaya`
-  MODIFY `id_foto_budaya` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT untuk tabel `tb_galery_hotel`
---
-ALTER TABLE `tb_galery_hotel`
-  MODIFY `id_galery_hotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT untuk tabel `tb_galery_kuliner`
---
-ALTER TABLE `tb_galery_kuliner`
-  MODIFY `id_galery_kuliner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT untuk tabel `tb_galery_wisata`
---
-ALTER TABLE `tb_galery_wisata`
-  MODIFY `id_foto_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
---
--- AUTO_INCREMENT untuk tabel `tb_hotel`
---
-ALTER TABLE `tb_hotel`
-  MODIFY `id_hotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_budaya` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_kuliner`
 --
 ALTER TABLE `tb_kuliner`
-  MODIFY `id_kuliner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_kuliner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_wisata`
 --
 ALTER TABLE `tb_wisata`
-  MODIFY `id_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
