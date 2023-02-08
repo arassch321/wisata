@@ -56,7 +56,6 @@ class Destinasi extends CI_Controller
 	public function detail($slug)
 	{
 		$data['wisata'] = $this->Admin_model->ambil_data_by_id('tb_wisata','slug_wisata',$slug);
-		$data['galery'] = $this->Admin_model->ambil_data_by_id_result('tb_galery_wisata','id_wisata',$data['wisata']['id_wisata']);
 
 		$this->load->view('homepage/Header');
 		$this->load->view('homepage/Destinasi_detail', $data);

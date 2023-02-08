@@ -22,7 +22,6 @@ class Budaya extends CI_Controller
 	public function detail($slug)
 	{
 		$data['budaya'] = $this->Admin_model->ambil_data_by_id('tb_budaya','slug_budaya',$slug);
-		$data['galery'] = $this->Admin_model->ambil_data_by_id_result('tb_galery_budaya','id_budaya',$data['budaya']['id_budaya']);
 
 		$this->load->view('homepage/Header');
 		$this->load->view('homepage/Budaya_detail', $data);
