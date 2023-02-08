@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Feb 2023 pada 13.29
+-- Waktu pembuatan: 08 Feb 2023 pada 13.35
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 8.0.8
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `wisata`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_auth`
+--
+
+CREATE TABLE `tb_auth` (
+  `id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `role` varchar(10) NOT NULL,
+  `nama` varchar(70) NOT NULL,
+  `foto` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_auth`
+--
+
+INSERT INTO `tb_auth` (`id`, `username`, `password`, `role`, `nama`, `foto`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'Admin', '');
 
 -- --------------------------------------------------------
 
